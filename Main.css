@@ -10,6 +10,12 @@ nav{
     padding:0 8%;
 }
 
+@media only screen and (max-width: 992px){
+    .nav-wrapper{
+        padding:0;
+    }
+}
+
 /* side section G image*/
 #side_image{
     background-size: cover;
