@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+          media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="Main.css" media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+    <!--    Import materialize Javascript first-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+            async></script>
+    <!--    Then only you can use M -->
+    <script type="text/javascript" src="Main.js" defer></script>
+    <title>Payment Summary</title>
+</head>
+<body>
+<div class="fixed-navbar" style="z-index: 999">
+    <nav>
+        <div class="nav-wrapper" style="padding:0 8%">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="slide-out" class="sidenav">
+                <li><a href="About Us.html">ABOUT US</a></li>
+                <li><a href="Product.html">PRODUCT</a></li>
+                <li><a href="Blog.html">BLOG</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+                <li><a class="dropdown-trigger" href="#" data-target="profile_option">PROFILE<i
+                        class="material-icons right">arrow_drop_down</i></a></li>
+                <ul id='profile_option' class='dropdown-content'>
+                    <li><a href="Profile.html">My Profile</a></li>
+                    <li><a href="Address.html">Addresses</a></li>
+                    <li><a href="Password.html">Password</a></li>
+                    <li><a href="Transaction.html">Transaction</a></li>
+                    <li><a href="Help%20Center.html">Help Center</a></li>
+                </ul>
+                <li><a href="Cart.html" class="btn waves-effect waves-light"><i class="material-icons">shopping_cart</i>Cart</a>
+                </li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="About Us.html">ABOUT US</a></li>
+                <li><a href="Product.html">PRODUCT</a></li>
+                <li><a href="Blog.html">BLOG</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+                <li><a href="Profile.html"><i class="material-icons">person</i></a></li>
+                <li><a href="Cart.html"><i class="material-icons">shopping_cart</i></a></li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="input-field col s12">
+            <h4>Shipping Address</h4>
+            <select>
+                <option value="0" selected>
+                    Angeline, +60184729224
+                    Asia Pacific University (APU), Jalan Teknologi 5, 57000, Kuala Lumpur
+                </option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
+        </div>
+        <div class="col s12">
+            <h4>Purchase Summary</h4>
+            <div class="row valign-wrapper" style="border-bottom: 1px solid #eceff1; margin-bottom:1%">
+                <div class="col s4 m2">
+                    <model-viewer src="Models/GREVIL A303 BURGUNDY.glb"
+                                  ios-src=""
+                                  alt="GREVIL A303 BURGUNDY"
+                                  shadow-intensity="1" style="height: 100px">
+                    </model-viewer>
+                </div>
+                <div class="col s5 m6">
+                    <h6>GREVIL A303 BURGUNDY</h6>
+                    <p style="font-size: small">Variation : burgundy</p>
+                    <p style="font-size: medium; font-weight: bold; color: #d50000">RM 10000</p>
+                </div>
+                <div class="col s3 m4" style="text-align: right!important;">
+                    <p style="font-size: small">x1</p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="row">
+                <div class="col s12">
+                    <h4>Payment Method</h4>
+                </div>
+                <div class="col s12">
+                    <h6>Please choose a payment method :</h6>
+                </div>
+                <div class="col s12 m5">
+                    <!--Payment Method 1-->
+                    <div class="col s12" style="margin:3% auto">
+                        <button class="btn waves-effect waves-light red accent-4 grey-text text-lighten-5" name="action" style="width:100%" id="cc" onclick="RBCheck('cc')">
+                            Debit / Credit card
+                        </button>
+                    </div>
+
+                    <!--Payment Methos 2-->
+                    <div class="col s12" style="margin-bottom:3%;">
+                        <button class="btn waves-effect waves-light grey lighten-5 red-text text-accent-4" name="action" style="width:100%" id="ob" onclick="RBCheck('ob')">
+                            Online banking
+                        </button>
+                    </div>
+
+                    <!--Payment Methos 3-->
+                    <div class="col s12" style="margin-bottom:3%;">
+                        <a href="https://www.paypal.com/my/signin" class="btn waves-effect waves-light grey lighten-5 red-text text-accent-4" style="width:100%" id="pp" target="_blank" onclick="RBCheck('pp')">
+                            Pay with paypal
+                        </a>
+                    </div>
+                </div>
+                <div class="col s12 m7">
+                    <!--cc-input-->
+                    <form onsubmit="event.preventDefault(); makePayment()">
+                        <div class="row" id="cc-input">
+                            <div class="input-field col s12 m6">
+                                <input placeholder="Enter card name" id="name" type="text" class="input_text pay validate" required>
+                                <label for="name">Card Name</label>
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <input placeholder="Enter card number" id="cnumber" type="number" class="input_text pay validate"
+                                       onkeyup="validateCard(this, 16)" required>
+                                <label for="cnumber">Credit Card</label>
+                            </div>
+                            <div class="input-field col s12 m3">
+                                <input id="month" type="number" class="input_text pay validate" onkeyup="validateCard(this, 2)"
+                                       placeholder="Enter month" required>
+                                <label for="month">Month</label>
+                            </div>
+                            <div class="input-field col s12 m3">
+                                <input id="year" type="number" class="input_text pay validate" onkeyup="validateCard(this, 2)"
+                                       placeholder="Enter year" required>
+                                <label for="year">Year</label>
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <input id="cvv" type="number" class="input_text pay validate" onkeyup="validateCard(this, 3)"
+                                       placeholder="Enter CVV" required>
+                                <label for="cvv">CVV</label>
+                            </div>
+                            <div class="col s12 center" style="margin: 5% auto">
+                                <button id="btn_ccpay" class="btn waves-effect waves-light" type="submit">
+                                    Pay
+                                    <i class="material-icons right">account_balance_wallet</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!--ob-input-->
+                    <form onsubmit="event.preventDefault();">
+                        <div class="row" id="ob-input" style="display:none">
+                            <div class="input-field col s12">
+                                <label>
+                                    <input class="with-gap" name="obpay" type="radio" id="Maybank" checked onchange="checkOB('Maybank')" />
+                                    <span style="font-size:large">Maybank</span>
+                                </label>
+                            </div>
+                            <div class="input-field col s12">
+                                <label>
+                                    <input class="with-gap" name="obpay" type="radio" id="CIMB" onchange="checkOB('CIMB')" />
+                                    <span style="font-size:large">CIMB</span>
+                                </label>
+                            </div>
+                            <div class="input-field col s12">
+                                <label>
+                                    <input class="with-gap" name="obpay" type="radio" id="Hong" onchange="checkOB('Hong')" />
+                                    <span style="font-size:large">Hong Leong</span>
+                                </label>
+                            </div>
+                            <div class="input-field col s12">
+                                <label>
+                                    <input class="with-gap" name="obpay" type="radio" id="RHB" onchange="checkOB('RHB')" />
+                                    <span style="font-size:large">RHB</span>
+                                </label>
+                            </div>
+                            <div class="col s12 center" style="margin-top: 15%; margin-bottom:5%">
+                                <button id="btn_obpay" class="btn waves-effect waves-light" type="submit">
+                                    Pay
+                                    <i class="material-icons right">account_balance_wallet</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="page-footer">
+    <!--med & large footer-->
+    <div class="row foot hide-on-small-only">
+        <div class="col s2">
+            <h6 class="white-text">Services</h6>
+        </div>
+        <div class="col s4">
+            <ul>
+                <li><a class="white-text" href="#">Contact Us</a></li>
+                <li><a class="white-text" href="#">Ordering & Payment</a></li>
+                <li><a class="white-text" href="#">Shipping</a></li>
+                <li><a class="white-text" href="#">Return</a></li>
+            </ul>
+        </div>
+        <div class="col s2">
+            <h6 class="white-text">Information</h6>
+        </div>
+        <div class="col s4">
+            <ul>
+                <li><a class="white-text" href="#">Privacy Policy</a></li>
+                <li><a class="white-text" href="#">Term & Conditions</a></li>
+                <li><a class="white-text" href="#">FAQ</a></li>
+                <li><a class="white-text" href="#">Sizing Guide</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--small footer-->
+    <div class="row foot hide-on-med-and-up">
+        <div class="col s6">
+            <h6 class="white-text">Services</h6>
+            <ul>
+                <li><a class="white-text" href="#">Contact Us</a></li>
+                <li><a class="white-text" href="#">Ordering & Payment</a></li>
+                <li><a class="white-text" href="#">Shipping</a></li>
+                <li><a class="white-text" href="#">Return</a></li>
+            </ul>
+        </div>
+        <div class="col s6">
+            <h6 class="white-text">Information</h6>
+            <ul>
+                <li><a class="white-text" href="#">Privacy Policy</a></li>
+                <li><a class="white-text" href="#">Term & Conditions</a></li>
+                <li><a class="white-text" href="#">FAQ</a></li>
+                <li><a class="white-text" href="#">Sizing Guide</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-copyright">
+        © 2021 CYCLAR
+        <a href="#">
+            <img src="Images/Icon/icon_ig.png" alt="Instagram icon" width="20%">
+            <img src="Images/Icon/icon_facebook.png" alt="Instagram icon"width="20%">
+            <img src="Images/Icon/icon_twitter.png" alt="Instagram icon" width="20%">
+        </a>
+    </div>
+</footer>
+
+<script type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+<script nomodule
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+</script>
+</body>
+</html>

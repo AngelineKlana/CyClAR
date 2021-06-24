@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+          media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="Main.css" media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+    <!--    Import materialize Javascript first-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+            async></script>
+    <!--    Then only you can use M -->
+    <script type="text/javascript" src="Main.js" defer></script>
+    <title>Contact</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="fixed-navbar" style="z-index: 999">
+    <nav>
+        <div class="nav-wrapper" style="padding:0 8%">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="slide-out" class="sidenav">
+                <li><a href="About Us.html">ABOUT US</a></li>
+                <li><a href="Product.html">PRODUCT</a></li>
+                <li><a href="Blog.html">BLOG</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+                <li><a class="dropdown-trigger" href="#" data-target="profile_option">PROFILE<i
+                        class="material-icons right">arrow_drop_down</i></a></li>
+                <ul id='profile_option' class='dropdown-content'>
+                    <li><a href="Profile.html">My Profile</a></li>
+                    <li><a href="Address.html">Addresses</a></li>
+                    <li><a href="Password.html">Password</a></li>
+                    <li><a href="Transaction.html">Transaction</a></li>
+                    <li><a href="Help%20Center.html">Help Center</a></li>
+                </ul>
+                <li><a href="Cart.html" class="btn waves-effect waves-light"><i class="material-icons">shopping_cart</i>Cart</a>
+                </li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="About Us.html">ABOUT US</a></li>
+                <li><a href="Product.html">PRODUCT</a></li>
+                <li><a href="Blog.html">BLOG</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+                <li><a href="Profile.html"><i class="material-icons">person</i></a></li>
+                <li><a href="Cart.html"><i class="material-icons">shopping_cart</i></a></li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<!--Heading-->
+<div class="row" id="pageheader">
+    <div class="container">
+        <div class="col s12">
+            <h1>Contact Us</h1>
+            <p id="textheader">Get in touch with us and start your journey using CyclAR.</p>
+        </div>
+    </div>
+</div>
+
+<!--Content-->
+<div class="row" style="margin-bottom: 0">
+    <div class="col s12 m7" style="padding-left: 8%; padding-right:8%; margin-top: 4%; margin-bottom: 5%">
+        <h5 class="center" style="margin-bottom: 3%; font-weight: bold">Get in Touch With Us</h5>
+        <div clas="row valign-wrapper">
+            <div class="input-field col s12 m6" style="margin-bottom: 1%">
+                <input placeholder="Enter name" id="user_name" type="text" class="input_text validate">
+                <label for="user_name">Name</label>
+            </div>
+            <div class="input-field col s12 m6" style="margin-bottom: 1%">
+                <input placeholder="Enter email" id="email" type="email" class="input_text validate">
+                <label for="email">Email</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="message" class="materialize-textarea" placeholder="Enter your message here..."
+                style="margin-top: 2%; height: 150px; margin-bottom: 0; padding: 2%; width: 100%"></textarea>
+                <label for="message">Message</label>
+            </div>
+            <div class="col s12 m6 offset-m3">
+                <a class="waves-effect waves-light btn" style="width: 100%">SUBMIT</a>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m5" style="padding: 0">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1468313843293!2d101.69830201441913!3d3.055350754574972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4abb795025d9%3A0x1c37182a714ba968!2sAsia%20Pacific%20University%20of%20Technology%20%26%20Innovation%20(APU)!5e0!3m2!1sen!2smy!4v1621861973617!5m2!1sen!2smy"
+                width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+
+<footer class="page-footer" style="margin-top: -1%;">
+    <!--med & large footer-->
+    <div class="row foot hide-on-small-only">
+        <div class="col s2">
+            <h6 class="white-text">Services</h6>
+        </div>
+        <div class="col s4">
+            <ul>
+                <li><a class="white-text" href="#">Contact Us</a></li>
+                <li><a class="white-text" href="#">Ordering & Payment</a></li>
+                <li><a class="white-text" href="#">Shipping</a></li>
+                <li><a class="white-text" href="#">Return</a></li>
+            </ul>
+        </div>
+        <div class="col s2">
+            <h6 class="white-text">Information</h6>
+        </div>
+        <div class="col s4">
+            <ul>
+                <li><a class="white-text" href="#">Privacy Policy</a></li>
+                <li><a class="white-text" href="#">Term & Conditions</a></li>
+                <li><a class="white-text" href="#">FAQ</a></li>
+                <li><a class="white-text" href="#">Sizing Guide</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--small footer-->
+    <div class="row foot hide-on-med-and-up">
+        <div class="col s6">
+            <h6 class="white-text">Services</h6>
+            <ul>
+                <li><a class="white-text" href="#">Contact Us</a></li>
+                <li><a class="white-text" href="#">Ordering & Payment</a></li>
+                <li><a class="white-text" href="#">Shipping</a></li>
+                <li><a class="white-text" href="#">Return</a></li>
+            </ul>
+        </div>
+        <div class="col s6">
+            <h6 class="white-text">Information</h6>
+            <ul>
+                <li><a class="white-text" href="#">Privacy Policy</a></li>
+                <li><a class="white-text" href="#">Term & Conditions</a></li>
+                <li><a class="white-text" href="#">FAQ</a></li>
+                <li><a class="white-text" href="#">Sizing Guide</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-copyright">
+        © 2021 CYCLAR
+        <a href="#">
+            <img src="Images/Icon/icon_ig.png" alt="Instagram icon" width="20%">
+            <img src="Images/Icon/icon_facebook.png" alt="Instagram icon"width="20%">
+            <img src="Images/Icon/icon_twitter.png" alt="Instagram icon" width="20%">
+        </a>
+    </div>
+</footer>
+
+<script type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+<script nomodule
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+</script>
+
+</body>
+</html>

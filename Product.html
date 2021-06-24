@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+          media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="Main.css" media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+    <!--    Import materialize Javascript first-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+            async></script>
+    <!--    Then only you can use M -->
+    <script type="text/javascript" src="Main.js" defer></script>
+    <title>Products</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="fixed-navbar" style="z-index: 999">
+    <nav>
+        <div class="nav-wrapper" style="padding:0 8%">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="slide-out" class="sidenav">
+                <li><a href="About Us.html">ABOUT US</a></li>
+                <li><a href="Product.html">PRODUCT</a></li>
+                <li><a href="Blog.html">BLOG</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+                <li><a class="dropdown-trigger" href="#" data-target="profile_option">PROFILE<i
+                        class="material-icons right">arrow_drop_down</i></a></li>
+                <ul id='profile_option' class='dropdown-content'>
+                    <li><a href="Profile.html">My Profile</a></li>
+                    <li><a href="Address.html">Addresses</a></li>
+                    <li><a href="Password.html">Password</a></li>
+                    <li><a href="Transaction.html">Transaction</a></li>
+                    <li><a href="Help%20Center.html">Help Center</a></li>
+                </ul>
+                <li><a href="Cart.html" class="btn waves-effect waves-light"><i class="material-icons">shopping_cart</i>Cart</a>
+                </li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="About Us.html">ABOUT US</a></li>
+                <li><a href="Product.html">PRODUCT</a></li>
+                <li><a href="Blog.html">BLOG</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+                <li><a href="Profile.html"><i class="material-icons">person</i></a></li>
+                <li><a href="Cart.html"><i class="material-icons">shopping_cart</i></a></li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<!--sort, search-->
+<div class="row" style="margin-top: 3%">
+    <div class="container">
+        <div class="col s3 m2 hide-on-small-only center" >
+            <h6 style="font-weight:bold">Sort By</h6>
+        </div>
+        <div class="col s9 m3 hide-on-small-only">
+            <select>
+                <option value="1" selected>Latest</option>
+                <option value="2">Price (Low to High)</option>
+                <option value="3">Price (High to Low)</option>
+                <option value="4">Best Seller</option>
+            </select>
+        </div>
+
+        <div class="col s3 m2 hide-on-med-and-up center" style="margin: 5% 0;" >
+            <h6 style="font-weight:bold">Sort By</h6>
+        </div>
+        <div class="col s9 m4 hide-on-med-and-up" style="margin: 5% 0;">
+            <select>
+                <option value="1" selected>Latest</option>
+                <option value="2">Price (Low to High)</option>
+                <option value="3">Price (High to Low)</option>
+                <option value="4">Best Seller</option>
+            </select>
+        </div>
+
+        <div class="col s12 m5 offset-m2">
+            <div class="search-wrapper">
+                <input id="search" placeholder="Search">
+                <i class="material-icons search-icon">search</i>
+                <div class="search-results"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--content-->
+<div class="container">
+    <div class="row">
+        <div class="col s12 m4">
+            <div class="card">
+                <a href="Details-bike1.html">
+                    <div class="card-image">
+                        <model-viewer src="Models/bike/bike1-burgundy.glb"
+                                      ios-src="Models/bike/bike1-burgundy.usdz"
+                                      poster="Models/poster/poster-bike1-burgundy.png"
+                                      alt="Bike Burgundy"
+                                      shadow-intensity="1"
+                                      camera-controls
+                                      auto-rotate>
+                        </model-viewer>
+                    </div>
+                    <div class="card-content" style="padding-bottom: 0">
+                        <h6 class="card-title" style="margin-top: 0">Grevil A303</h6>
+                        <p>RM 19500</p>
+                        <div class="row red-text text-accent-4" style="margin-top: 3%; margin-bottom: 0;">
+                            <div class="col s7 offset-s4">
+                                <div class="row">
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star_half</i></div>
+                                    <div class="col s2"><i class="material-icons star">star_border</i></div>
+                                    <div class="col s2">
+                                        <p class="grey-text text-darken-4" style="font-size: small; padding-left: 2%">(78)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="card-action">
+                    <a href="##" class="btn btn-cart">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card">
+                <a href="Details-bike2.html">
+                    <div class="card-image">
+                        <model-viewer src="Models/bike/bike2-red.glb"
+                                      ios-src="Models/bike/bike2-red.usdz"
+                                      poster="Models/poster/poster-bike2-red.png"
+                                      alt="Bike Dogma F12"
+                                      shadow-intensity="1"
+                                      camera-controls
+                                      auto-rotate
+                                      ar ar-placement="wall">
+                        </model-viewer>
+                    </div>
+                    <div class="card-content" style="padding-bottom: 0">
+                        <h6 class="card-title" style="margin-top: 0">DOGMA F12 GRENADIER</h6>
+                        <p>RM 26700</p>
+                        <div class="row red-text text-accent-4" style="margin-top: 3%; margin-bottom: 0;">
+                            <div class="col s7 offset-s4">
+                                <div class="row">
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star_half</i></div>
+                                    <div class="col s2"><i class="material-icons star">star_border</i></div>
+                                    <div class="col s2">
+                                        <p class="grey-text text-darken-4" style="font-size: small; padding-left: 2%">(78)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="card-action">
+                    <a href="##" class="btn btn-cart">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4">
+        <div class="card">
+            <a href="Details-bike3.html">
+                <div class="card-image">
+                    <model-viewer src="Models/bike/bike3-black.glb"
+                                  ios-src="Models/bike/bike3-black.usdz"
+                                  poster="Models/poster/poster-bike3-red.png"
+                                  alt="Bike Crossista Plus"
+                                  shadow-intensity="1"
+                                  camera-controls
+                                  auto-rotate>
+                    </model-viewer>
+                </div>
+                <div class="card-content" style="padding-bottom: 0">
+                    <h6 class="card-title" style="margin-top: 0">CROSSITA+ 450 CARBON </h6>
+                    <p>RM 18000</p>
+                    <div class="row red-text text-accent-4" style="margin-top: 3%; margin-bottom: 0;">
+                        <div class="col s7 offset-s4">
+                            <div class="row">
+                                <div class="col s2"><i class="material-icons star">star</i></div>
+                                <div class="col s2"><i class="material-icons star">star</i></div>
+                                <div class="col s2"><i class="material-icons star">star</i></div>
+                                <div class="col s2"><i class="material-icons star">star_half</i></div>
+                                <div class="col s2"><i class="material-icons star">star_border</i></div>
+                                <div class="col s2">
+                                    <p class="grey-text text-darken-4" style="font-size: small; padding-left: 2%">(78)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="card-action">
+                <a href="##" class="btn btn-cart">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+        <div class="col s12 m4">
+            <div class="card">
+                <a href="Details-hang1.html">
+                    <div class="card-image">
+                        <model-viewer src="Models/Hanger/hang1.glb"
+                                      ios-src="Models/Hanger/hang1.usdz"
+                                      poster="Models/poster/hang1.png"
+                                      alt="Shoze Bike Wall Mount"
+                                      shadow-intensity="1"
+                                      camera-controls
+                                      auto-rotate>
+                        </model-viewer>
+                    </div>
+                    <div class="card-content" style="padding-bottom: 0">
+                        <h6 class="card-title" style="margin-top: 0">SHOZE Set Of 2 Wall-Mount Bicycle Holders</h6>
+                        <p>RM 52</p>
+                        <div class="row red-text text-accent-4" style="margin-top: 3%; margin-bottom: 0;">
+                            <div class="col s7 offset-s4">
+                                <div class="row">
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star_half</i></div>
+                                    <div class="col s2"><i class="material-icons star">star_border</i></div>
+                                    <div class="col s2">
+                                        <p class="grey-text text-darken-4" style="font-size: small; padding-left: 2%">(78)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="card-action">
+                    <a href="##" class="btn btn-cart">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card">
+                <a href="Details-hang2.html">
+                    <div class="card-image">
+                        <model-viewer src="Models/Hanger/hang2.glb"
+                                      ios-src="Models/Hanger/hang2.usdz"
+                                      poster="Models/poster/hang2.png"
+                                      alt="Livivo Bike Wall Mount"
+                                      shadow-intensity="1"
+                                      camera-controls
+                                      auto-rotate>
+                        </model-viewer>
+                    </div>
+                    <div class="card-content" style="padding-bottom: 0">
+                        <h6 class="card-title" style="margin-top: 0">LIVIVO Folding Wall Mounted Bike Holder</h6>
+                        <p>RM 75</p>
+                        <div class="row red-text text-accent-4" style="margin-top: 3%; margin-bottom: 0;">
+                            <div class="col s7 offset-s4">
+                                <div class="row">
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star_half</i></div>
+                                    <div class="col s2"><i class="material-icons star">star_border</i></div>
+                                    <div class="col s2">
+                                        <p class="grey-text text-darken-4" style="font-size: small; padding-left: 2%">(78)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="card-action">
+                    <a href="##" class="btn btn-cart">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card">
+                <a href="Details-Helmet1.html">
+                    <div class="card-image">
+                        <model-viewer src="Models/helmet/helmet1.glb"
+                                      ios-src="Models/helmet/helmet1.2.usdz"
+                                      poster="Models/poster/helmet1-orange.png"
+                                      alt="Mokfire bike helmet"
+                                      shadow-intensity="1"
+                                      camera-controls
+                                      auto-rotate>
+                        </model-viewer>
+                    </div>
+                    <div class="card-content" style="padding-bottom: 0">
+                        <h6 class="card-title" style="margin-top: 0">MOKFIRE Adjustable Bike Helmet  </h6>
+                        <p>RM 350</p>
+                        <div class="row red-text text-accent-4" style="margin-top: 3%; margin-bottom: 0;">
+                            <div class="col s7 offset-s4">
+                                <div class="row">
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star_half</i></div>
+                                    <div class="col s2"><i class="material-icons star">star_border</i></div>
+                                    <div class="col s2">
+                                        <p class="grey-text text-darken-4" style="font-size: small; padding-left: 2%">(78)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="card-action">
+                    <a href="##" class="btn btn-cart">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card">
+                <a href="Details-Helmet2.html">
+                    <div class="card-image">
+                        <model-viewer src="Models/helmet/helmet2.glb"
+                                      ios-src="Models/helmet/helmet2.2.usdz"
+                                      poster="Models/poster/helmet2-blue.png"
+                                      alt="GIRO bike helmet"
+                                      shadow-intensity="1"
+                                      camera-controls
+                                      auto-rotate>
+                        </model-viewer>
+                    </div>
+                    <div class="card-content" style="padding-bottom: 0">
+                        <h6 class="card-title" style="margin-top: 0">GIRO Bike Helmet for Adult </h6>
+                        <p>RM 320</p>
+                        <div class="row red-text text-accent-4" style="margin-top: 3%; margin-bottom: 0;">
+                            <div class="col s7 offset-s4">
+                                <div class="row">
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star</i></div>
+                                    <div class="col s2"><i class="material-icons star">star_half</i></div>
+                                    <div class="col s2"><i class="material-icons star">star_border</i></div>
+                                    <div class="col s2">
+                                        <p class="grey-text text-darken-4" style="font-size: small; padding-left: 2%">(78)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="card-action">
+                    <a href="##" class="btn btn-cart">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="page-footer">
+    <!--med & large footer-->
+    <div class="row foot hide-on-small-only">
+        <div class="col s2">
+            <h6 class="white-text">Services</h6>
+        </div>
+        <div class="col s4">
+            <ul>
+                <li><a class="white-text" href="#">Contact Us</a></li>
+                <li><a class="white-text" href="#">Ordering & Payment</a></li>
+                <li><a class="white-text" href="#">Shipping</a></li>
+                <li><a class="white-text" href="#">Return</a></li>
+            </ul>
+        </div>
+        <div class="col s2">
+            <h6 class="white-text">Information</h6>
+        </div>
+        <div class="col s4">
+            <ul>
+                <li><a class="white-text" href="#">Privacy Policy</a></li>
+                <li><a class="white-text" href="#">Term & Conditions</a></li>
+                <li><a class="white-text" href="#">FAQ</a></li>
+                <li><a class="white-text" href="#">Sizing Guide</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--small footer-->
+    <div class="row foot hide-on-med-and-up">
+        <div class="col s6">
+            <h6 class="white-text">Services</h6>
+            <ul>
+                <li><a class="white-text" href="#">Contact Us</a></li>
+                <li><a class="white-text" href="#">Ordering & Payment</a></li>
+                <li><a class="white-text" href="#">Shipping</a></li>
+                <li><a class="white-text" href="#">Return</a></li>
+            </ul>
+        </div>
+        <div class="col s6">
+            <h6 class="white-text">Information</h6>
+            <ul>
+                <li><a class="white-text" href="#">Privacy Policy</a></li>
+                <li><a class="white-text" href="#">Term & Conditions</a></li>
+                <li><a class="white-text" href="#">FAQ</a></li>
+                <li><a class="white-text" href="#">Sizing Guide</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-copyright">
+        © 2021 CYCLAR
+        <a href="#">
+            <img src="Images/Icon/icon_ig.png" alt="Instagram icon" width="20%">
+            <img src="Images/Icon/icon_facebook.png" alt="Instagram icon"width="20%">
+            <img src="Images/Icon/icon_twitter.png" alt="Instagram icon" width="20%">
+        </a>
+    </div>
+</footer>
+
+<script type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+<script nomodule
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+          media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="Main.css" media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+    <!--    Import materialize Javascript first-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+            async></script>
+    <!--    Then only you can use M -->
+    <script type="text/javascript" src="Main.js" defer></script>
+    <title>Profile</title>
+</head>
+<body>
+<div class="fixed-navbar" style="z-index: 999">
+    <nav>
+        <div class="nav-wrapper" style="padding:0 8%">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="slide-out" class="sidenav">
+                <li><a href="About Us.html">ABOUT US</a></li>
+                <li><a href="Product.html">PRODUCT</a></li>
+                <li><a href="Blog.html">BLOG</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+                <li><a class="dropdown-trigger" href="#" data-target="profile_option">PROFILE<i
+                        class="material-icons right">arrow_drop_down</i></a></li>
+                <ul id='profile_option' class='dropdown-content'>
+                    <li><a href="Profile.html">My Profile</a></li>
+                    <li><a href="Address.html">Addresses</a></li>
+                    <li><a href="Password.html">Password</a></li>
+                    <li><a href="Transaction.html">Transaction</a></li>
+                    <li><a href="Help%20Center.html">Help Center</a></li>
+                </ul>
+                <li><a href="Cart.html" class="btn waves-effect waves-light"><i class="material-icons">shopping_cart</i>Cart</a>
+                </li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="About Us.html">ABOUT US</a></li>
+                <li><a href="Product.html">PRODUCT</a></li>
+                <li><a href="Blog.html">BLOG</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+                <li><a href="Profile.html"><i class="material-icons">person</i></a></li>
+                <li><a href="Cart.html"><i class="material-icons">shopping_cart</i></a></li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<!--Large screen-->
+<div class="row hide-on-med-and-down" style="margin-bottom: 0">
+    <!--left side-->
+    <div class="col s3 blue-grey lighten-5" style="height: 102vh">
+        <div class="row left">
+            <div class="col s12">
+                <a class="red-text text-accent-4">Profile</a>
+            </div>
+            <div class="col s12">
+                <a href="Address.html">Addresses</a>
+            </div>
+            <div class="col s12">
+                <a href="Password.html">Password</a>
+            </div>
+            <div class="col s12">
+                <a href="Transaction.html">Transactions</a>
+            </div>
+            <div class="col s12">
+                <a href="Help%20Center.html">Help Center</a>
+            </div>
+        </div>
+    </div>
+
+    <!--right side-->
+    <div class="col s9" style="padding-top:4%; padding-left: 4%; padding-right: 8%">
+        <h4>My Profile</h4>
+        <h6>Manage and protect your account.</h6>
+        <hr style="margin: 3% 0">
+        <div class="row valign-wrapper">
+            <div class="col s12 m7" style="border-right: 1px solid #eceff1">
+                <div class="row">
+                    <div class="input-field col s12 m10 " style="margin-bottom: 1%">
+                        <input value="Angeline" id="name" type="email" class="input_text">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-field col s12 m10" style="margin-bottom: 1%">
+                        <input value="angelineklana99@gmail.com" id="email" type="email" class="input_text">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-field col s12 m10 " style="margin-bottom: 1%">
+                        <input value="+60 172947399" id="pnum" type="text" class="input_text">
+                        <label for="pnum">Phone Number</label>
+                    </div>
+                    <div class="input-field col s12 m10 " style="margin-bottom: 1%">
+                        <input type="text" class="datepicker" id="date" value="Dec 24, 1999" style="margin-top: 3%">
+                        <label for="date">Date of Birth</label>
+                    </div>
+                    <div class="col s12 m10">
+                        <label>Gender</label>
+                        <div>
+                            <label style="padding-right: 8%">
+                                <input class="with-gap" name="group3" type="radio" checked/>
+                                <span>Female</span>
+                            </label>
+                            <label style="padding-right: 8%">
+                                <input class="with-gap" name="group3" type="radio"/>
+                                <span>Male</span>
+                            </label>
+                            <label>
+                                <input class="with-gap" name="group3" type="radio"/>
+                                <span>Other</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <a href="#" class="btn waves-effect waves-light" style="padding: 0 8%; margin: 5% 0">SAVE</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m5">
+                <div class="row center">
+                    <div class="col s12">
+                        <i class="material-icons" style="font-size: 10rem; color: #eceff1">account_circle</i>
+                    </div>
+                    <div class="col s12">
+                        <a class="btn file-field">
+                            <span>Select Image</span>
+                            <input type="file">
+                        </a>
+                    </div>
+                    <div class="col s12" style="color: #757575; font-size: 0.8rem; margin-top: 5%">
+                        <p>File size: maximum 1MB</p>
+                        <p>File extension: JPEG or PNG</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--Medium and small screen-->
+<div class="container hide-on-large-only">
+    <div class="row">
+        <div class="col s12" style="margin-top: 5%">
+            <h5>My Profile</h5>
+        </div>
+        <div class="col s12 center" style="padding: 3% 0;">
+            <a class="file-field">
+                <i class="material-icons large" style="color: #eceff1">account_circle</i>
+                <input type="file">
+            </a>
+        </div>
+        <div class="input-field col s12" style="margin-bottom: 1%">
+            <input value="Angeline" id="name1" type="email" class="input_text">
+            <label for="name1">Name</label>
+        </div>
+        <div class="input-field col s12" style="margin-bottom: 1%">
+            <input value="angelineklana99@gmail.com" id="email1" type="email" class="input_text">
+            <label for="email1">Email</label>
+        </div>
+        <div class="input-field col s12" style="margin-bottom: 1%">
+            <input value="+60 172947399" id="pnum1" type="text" class="input_text">
+            <label for="pnum1">Phone Number</label>
+        </div>
+        <div class="input-field col s12" style="margin-bottom: 1%">
+            <input type="text" class="datepicker" id="date1" value="Dec 24, 1999" style="margin-top: 3%">
+            <label for="date1">Date of Birth</label>
+        </div>
+        <div class="col s12">
+            <label>Gender</label>
+            <div>
+                <label style="padding-right: 8%">
+                    <input class="with-gap" name="group3" type="radio" checked/>
+                    <span>Female</span>
+                </label>
+                <label style="padding-right: 8%">
+                    <input class="with-gap" name="group3" type="radio"/>
+                    <span>Male</span>
+                </label>
+                <label>
+                    <input class="with-gap" name="group3" type="radio"/>
+                    <span>Other</span>
+                </label>
+            </div>
+        </div>
+        <div class="col s12 center">
+            <a href="#" class="btn waves-effect waves-light" style="padding: 0 8%; margin: 5% 0">SAVE</a>
+        </div>
+    </div>
+</div>
+
+<footer class="page-footer">
+    <!--med & large footer-->
+    <div class="row foot hide-on-small-only">
+        <div class="col s2">
+            <h6 class="white-text">Services</h6>
+        </div>
+        <div class="col s4">
+            <ul>
+                <li><a class="white-text" href="#">Contact Us</a></li>
+                <li><a class="white-text" href="#">Ordering & Payment</a></li>
+                <li><a class="white-text" href="#">Shipping</a></li>
+                <li><a class="white-text" href="#">Return</a></li>
+            </ul>
+        </div>
+        <div class="col s2">
+            <h6 class="white-text">Information</h6>
+        </div>
+        <div class="col s4">
+            <ul>
+                <li><a class="white-text" href="#">Privacy Policy</a></li>
+                <li><a class="white-text" href="#">Term & Conditions</a></li>
+                <li><a class="white-text" href="#">FAQ</a></li>
+                <li><a class="white-text" href="#">Sizing Guide</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--small footer-->
+    <div class="row foot hide-on-med-and-up">
+        <div class="col s6">
+            <h6 class="white-text">Services</h6>
+            <ul>
+                <li><a class="white-text" href="#">Contact Us</a></li>
+                <li><a class="white-text" href="#">Ordering & Payment</a></li>
+                <li><a class="white-text" href="#">Shipping</a></li>
+                <li><a class="white-text" href="#">Return</a></li>
+            </ul>
+        </div>
+        <div class="col s6">
+            <h6 class="white-text">Information</h6>
+            <ul>
+                <li><a class="white-text" href="#">Privacy Policy</a></li>
+                <li><a class="white-text" href="#">Term & Conditions</a></li>
+                <li><a class="white-text" href="#">FAQ</a></li>
+                <li><a class="white-text" href="#">Sizing Guide</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-copyright">
+        © 2021 CYCLAR
+        <a href="#">
+            <img src="Images/Icon/icon_ig.png" alt="Instagram icon" width="20%">
+            <img src="Images/Icon/icon_facebook.png" alt="Instagram icon"width="20%">
+            <img src="Images/Icon/icon_twitter.png" alt="Instagram icon" width="20%">
+        </a>
+    </div>
+</footer>
+
+<script type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+<script nomodule
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+</script>
+
+</body>
+</html>
