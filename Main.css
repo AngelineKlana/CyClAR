@@ -440,6 +440,15 @@ h3{
     border: 2px solid #d50000 !important;
 }
 
-.pagination li.active{
-    background-color: #d50000;
+.pagination li.active, a.fab, a#default-ar-button{
+    background-color: #d50000 !important;
 }
+
+#toggle{
+    background-color: white !important;
+    padding-top: 7px;
+    position: absolute;
+    top: 225px;
+    right: 16px;
+}
+
