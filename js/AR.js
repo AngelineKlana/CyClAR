@@ -23,7 +23,7 @@ function capture() {
 
     // Create card image
     let cardImage = document.createElement("div")
-    cardImage.className = "card-image"
+    cardImage.className = "card-image center"
 
     // get image from canvas
     let takepic = new Image();
@@ -35,6 +35,7 @@ function capture() {
     ahref.href = takepic.src
     ahref.download = "mypicture.png"
     ahref.innerText = "Download Image"
+    ahref.style.color = "#d50000"
 
     // Put image in card image
     cardImage.appendChild(takepic)
