@@ -452,3 +452,7 @@ h3{
     top: 225px;
     right: 16px;
 }
+
+.tabs-content.carousel.carousel-slider{
+    min-height: 98vh;
+}
