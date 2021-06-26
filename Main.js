@@ -25,32 +25,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function RBCheck(Buttonname) {
     if (Buttonname == "cc") {
-        changePayment('cc-input', 'ob-input','pp-input');
-        updateSelectedButton('cc', 'ob', 'pp');
+        changePayment('cc-input', 'ob-input');
+        updateSelectedButton('cc', 'ob');
     }
     else if (Buttonname == "ob") {
-        changePayment('ob-input', 'cc-input', 'pp-input');
-        updateSelectedButton('ob', 'cc', 'pp');
-    }
-    else if (Buttonname == "pp") {
-        changePayment('pp-input', 'cc-input', 'ob-input');
-        updateSelectedButton('pp', 'ob', 'cc');
+        changePayment('ob-input', 'cc-input');
+        updateSelectedButton('ob', 'cc');
     }
 }
 
-function changePayment(selected_payment, p1, p2) {
+function changePayment(selected_payment, p1) {
     document.getElementById(selected_payment).style.display = 'block';
     document.getElementById(p1).style.display = 'none';
-    document.getElementById(p2).style.display = 'none';
 }
 
-function updateSelectedButton(selected_btn, other_btn_one, other_btn_2) {
+function updateSelectedButton(selected_btn, other_btn_one) {
     let selected_class = ['red', 'accent-4','grey-text','text-lighten-5'];
     let unselected_class = ['grey', 'lighten-5', 'red-text','text-accent-4'];
 
     let btn_0 = document.getElementById(selected_btn);
     let btn_1 = document.getElementById(other_btn_one);
-    let btn_2 = document.getElementById(other_btn_2);
 
     for (let i = 0; i < selected_class.length; i++) {
         btn_0.classList.remove(unselected_class[i]);
@@ -58,9 +52,6 @@ function updateSelectedButton(selected_btn, other_btn_one, other_btn_2) {
 
         btn_1.classList.remove(selected_class[i]);
         btn_1.classList.add(unselected_class[i]);
-
-        btn_2.classList.remove(selected_class[i]);
-        btn_2.classList.add(unselected_class[i]);
     }
 }
 
