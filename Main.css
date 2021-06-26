@@ -419,7 +419,8 @@ h3{
 }
 
 .canvas_button{
-    top: 400px;
+    left: 45%;
+    bottom: 10%;
     padding-top: 0;
     padding-bottom: 15px;
     position: absolute;
