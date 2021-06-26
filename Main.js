@@ -116,7 +116,6 @@ function checkOB(OBid) {
     document.getElementById('btn_obpay').onclick = function() {
         window.open(webpage);
         document.getElementById('ob-input').style.display = 'none';
-        document.getElementById('success').style.display = 'block';
     }
 }
 
