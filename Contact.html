@@ -83,24 +83,27 @@
 <div class="row" style="margin-bottom: 0">
     <div class="col s12 m7" style="padding-left: 8%; padding-right:8%; margin-top: 4%; margin-bottom: 5%">
         <h5 class="center" style="margin-bottom: 3%; font-weight: bold">Get in Touch With Us</h5>
-        <div clas="row valign-wrapper">
-            <div class="input-field col s12 m6" style="margin-bottom: 1%">
-                <input placeholder="Enter name" id="user_name" type="text" class="input_text validate">
-                <label for="user_name">Name</label>
-            </div>
-            <div class="input-field col s12 m6" style="margin-bottom: 1%">
-                <input placeholder="Enter email" id="email" type="email" class="input_text validate">
-                <label for="email">Email</label>
-            </div>
-            <div class="input-field col s12">
+        <form>
+            <div clas="row valign-wrapper">
+                <div class="input-field col s12 m6" style="margin-bottom: 1%">
+                    <input placeholder="Enter name" id="user_name" type="text" class="input_text validate" required>
+                    <label for="user_name">Name</label>
+                </div>
+                <div class="input-field col s12 m6" style="margin-bottom: 1%">
+                    <input placeholder="Enter email" id="email" type="email" class="input_text validate" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field col s12">
                 <textarea id="message" class="materialize-textarea" placeholder="Enter your message here..."
-                style="margin-top: 2%; height: 150px; margin-bottom: 0; padding: 2%; width: 100%"></textarea>
-                <label for="message">Message</label>
+                          style="margin-top: 2%; height: 150px; margin-bottom: 0; padding: 2%; width: 100%" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <div class="col s12 m6 offset-m3">
+                    <button class="waves-effect waves-light btn" style="width: 100%" type="submit">SUBMIT</button>
+                </div>
             </div>
-            <div class="col s12 m6 offset-m3">
-                <a class="waves-effect waves-light btn" style="width: 100%">SUBMIT</a>
-            </div>
-        </div>
+        </form>
+
     </div>
     <div class="col s12 m5" style="padding: 0">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1468313843293!2d101.69830201441913!3d3.055350754574972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4abb795025d9%3A0x1c37182a714ba968!2sAsia%20Pacific%20University%20of%20Technology%20%26%20Innovation%20(APU)!5e0!3m2!1sen!2smy!4v1621861973617!5m2!1sen!2smy"
