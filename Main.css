@@ -104,13 +104,13 @@ textarea.materialize-textarea:focus:not([readonly])+label, input[type=email]:not
 }
 
 /*All buttons*/
-.btn, .btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus{
+.btn, .btn:focus, .btn-large:focus, .btn-small:focus{
     color:white;
     background-color: #D50000;
     border-radius: 5px;
 }
 
-.btn-floating, .datepicker-date-display, .datepicker-table td.is-selected{
+.btn-floating, .datepicker-date-display, .datepicker-table td.is-selected, .btn-floating:focus{
     background-color: #D50000;
 }
 
