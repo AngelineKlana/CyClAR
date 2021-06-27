@@ -147,7 +147,7 @@
                 </div>
                 <div class="col s12 m7">
                     <!--cc-input-->
-                    <form onsubmit="event.preventDefault(); makePayment()">
+                    <form onsubmit="event.preventDefault();">
                         <div class="row" id="cc-input">
                             <div class="input-field col s12 m6">
                                 <input placeholder="Enter card name" id="name" type="text" class="input_text pay validate" required>
@@ -155,29 +155,29 @@
                             </div>
                             <div class="input-field col s12 m6">
                                 <input placeholder="Enter card number" id="cnumber" type="number" class="input_text pay validate"
-                                       onkeyup="validateCard(this, 16)" required>
+                                       required maxlength="16" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                 <label for="cnumber">Credit Card</label>
                             </div>
                             <div class="input-field col s12 m3">
-                                <input id="month" type="number" class="input_text pay validate" onkeyup="validateCard(this, 2)"
-                                       placeholder="Enter month" required>
+                                <input id="month" type="number" class="input_text pay validate" placeholder="Enter month" required
+                                       required maxlength="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                 <label for="month">Month</label>
                             </div>
                             <div class="input-field col s12 m3">
-                                <input id="year" type="number" class="input_text pay validate" onkeyup="validateCard(this, 2)"
-                                       placeholder="Enter year" required>
+                                <input id="year" type="number" class="input_text pay validate" placeholder="Enter year" required
+                                       required maxlength="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                 <label for="year">Year</label>
                             </div>
                             <div class="input-field col s12 m6">
-                                <input id="cvv" type="number" class="input_text pay validate" onkeyup="validateCard(this, 3)"
-                                       placeholder="Enter CVV" required>
+                                <input id="cvv" type="number" class="input_text pay validate" placeholder="Enter CVV" required
+                                       required maxlength="3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                 <label for="cvv">CVV</label>
                             </div>
                             <div class="col s12 center" style="margin: 5% auto">
-                                <a href="Payment%20Success.html" id="btn_ccpay" class="btn waves-effect waves-light" type="submit">
+                                <button id="btn_ccpay" class="btn waves-effect waves-light" type="submit">
                                     Pay
                                     <i class="material-icons right">account_balance_wallet</i>
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </form>

@@ -55,41 +55,6 @@ function updateSelectedButton(selected_btn, other_btn_one) {
     }
 }
 
-function validateCard(e, threshold) {
-    let pay = document.getElementById('btn_ccpay');
-
-    if (e.value.length > threshold) {
-        pay.classList.add('disabled');
-        M.toast({ html: "Please check your input" });
-    } else {
-        pay.classList.remove('disabled');
-    }
-}
-
-function makePayment() {
-    if (document.getElementById('credit-card').value.length != 16) {
-        M.toast({ html: "Credit card must have at least 16 number." });
-    }
-    else if (document.getElementById('month').value.length != 2) {
-        M.toast({ html: "Month must have at least 2 number." });
-    }
-    else if (document.getElementById('year').value.length != 2) {
-        M.toast({ html: "Year must have at least 2 number." });
-    }
-    else if (document.getElementById('cvv').value.length != 3) {
-        M.toast({ html: "CVV must have at least 3 number." });
-    }
-    else {
-        document.getElementById("overlay").style.display = "block";
-
-        // Load home page after processing
-
-        setTimeout(function () {
-            LoadPage("home");
-        }, 3000);
-    }
-}
-
 function checkOB(OBid) {
     var webpage = "https://www.maybank2u.com.my/home/m2u/common/login.do";
     if (OBid == "Maybank") {
