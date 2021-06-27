@@ -83,7 +83,7 @@
 <div class="row" style="margin-bottom: 0">
     <div class="col s12 m7" style="padding-left: 8%; padding-right:8%; margin-top: 4%; margin-bottom: 5%">
         <h5 class="center" style="margin-bottom: 3%; font-weight: bold">Get in Touch With Us</h5>
-        <form>
+        <form onsubmit="event.preventDefault()">
             <div clas="row valign-wrapper">
                 <div class="input-field col s12 m6" style="margin-bottom: 1%">
                     <input placeholder="Enter name" id="user_name" type="text" class="input_text validate" required>
@@ -99,7 +99,7 @@
                     <label for="message">Message</label>
                 </div>
                 <div class="col s12 m6 offset-m3">
-                    <button class="waves-effect waves-light btn" style="width: 100%" type="submit">SUBMIT</button>
+                    <button class="waves-effect waves-light btn" style="width: 100%" type="submit" onclick="sentMsg()">SUBMIT</button>
                 </div>
             </div>
         </form>

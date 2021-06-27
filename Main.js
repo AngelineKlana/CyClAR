@@ -91,3 +91,15 @@ function showReview(page_number) {
         }
     }
 }
+
+function sentMsg(){
+    if (document.getElementById('user_name').value.length != 0 &&
+        document.getElementById('email').value.length != 0 &&
+        document.getElementById('message').value.length != 0)
+    {
+        M.toast({html: 'Message sent. We will get back to you soon'});
+        document.getElementById('user_name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+    }
+}
