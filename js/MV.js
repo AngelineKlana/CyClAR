@@ -35,3 +35,27 @@ function changeModelHang(idx) {
     mv.setAttribute('alt', hangerModels[idx].alt)
     mv.setAttribute('poster', 'Models/poster/' + hangerModels[idx].poster)
 }
+
+const QR = [
+    { src: 'qr1.png'}, // <- this is 0
+    { src: 'qr2.png'},
+    { src: 'qr3.png'},
+    { src: 'qr4.png'},
+    { src: 'qr5.png'}
+]
+
+const targetDiv = document.getElementById("QR_code")
+
+function openQR(idx) {
+    // get model viewer element and store it
+    let qr = document.getElementById('QR_code');
+    qr.src = 'Images/QR/' + QR[idx].src;
+
+    var x = document.getElementById("QR_code");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+

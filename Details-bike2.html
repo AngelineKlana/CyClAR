@@ -84,7 +84,7 @@
                           auto-rotate
                           id="viewer"
                           ar>
-                <a class="btn-floating hide-on-small-only" id="toggle">
+                <a class="btn-floating hide-on-small-only" id="toggle" onclick="openQR(1)">
                     <div class="center">
                         <svg version="1.1" id="view_x5F_in_x5F_AR_x5F_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
                         <rect id="Bounding_Box" x="5" y="5" fill="none" width="24" height="24"></rect>
@@ -103,6 +103,9 @@
                     </div>
                 </a>
             </model-viewer>
+            <div>
+                <img src="" id="QR_code" width="30%" style="display:none">
+            </div>
         </div>
         <div class="col s12 m6">
             <div class="row" style="margin-bottom: 0">
