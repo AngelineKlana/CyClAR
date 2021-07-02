@@ -95,6 +95,7 @@
                                   shadow-intensity="1"
                                   camera-controls
                                   auto-rotate
+                                  ar-modes="webxr scene-viewer quick-look"
                                   style="border-radius: 10px;height: 280px;"
                                   ar>
                     </model-viewer>
@@ -637,7 +638,7 @@
         if(pageno === 0) {
             // then show it
             document.getElementById('hangerModel').style.display = 'block';
-            document.getElementById('hangerModelBike').style.display = 'none'
+            document.getElementById('hangerModelBike').style.display = 'none';
         } else {
             // else hide it
             document.getElementById('hangerModel').style.display = 'none'

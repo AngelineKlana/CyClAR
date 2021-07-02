@@ -1,11 +1,12 @@
 const targetDiv = document.getElementById("ARcanvas");
 
-let threeStuffs = null
-
 function toggle() {
     targetDiv.style.display = "block";
     main();
 }
+
+let threeStuffs = null
+
 function exitAR(){
     targetDiv.style.display = "none";
     location.reload()
@@ -62,13 +63,6 @@ const arm = [
     {model:'helmet2-yellow2.glb', offsetYZ: [0.3, 0], src:'helmet2-yellow.glb', alt:'Helmet model 2 yellow', ios:'helmet2-yellow2.usdz', poster:'helmet2-gold.png'},
 ]
 
-const SETTINGS = {
-    gltfModelURL: 'Models/helmet/' + arm[0].model,
-    cubeMapURL: 'Bridge2/',
-    offsetYZ: arm[0].offsetYZ, // offset of the model in 3D along vertical and depth axis
-    scale:1.6 //scale the object
-};
-
 function changeSet(idx){
     SETTINGS.gltfModelURL = 'Models/helmet/' + arm[idx].model;
     SETTINGS.offsetYZ = arm[idx].offsetYZ;
@@ -79,6 +73,13 @@ function changeSet(idx){
     mv.setAttribute('alt', arm[idx].alt)
     mv.setAttribute('poster', 'Models/poster/' +arm[idx].poster)
 }
+
+const SETTINGS = {
+    gltfModelURL: 'Models/helmet/' + arm[0].model,
+    cubeMapURL: 'Bridge2/',
+    offsetYZ: arm[0].offsetYZ, // offset of the model in 3D along vertical and depth axis
+    scale:1.6 //scale the object
+};
 
 "use strict";
 
