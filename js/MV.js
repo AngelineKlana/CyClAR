@@ -1,5 +1,5 @@
 const bicycleModels = [
-    { src: 'bike1-burgundy.glb', alt: 'GREVIL A303 BURGUNDY' , ios:'bike1-burgundy.usdz', poster:'poster-bike1-burgundy.png'}, // <- this is 0
+    { src: 'bike1test.glb', alt: 'GREVIL A303 BURGUNDY' , ios:'bike1-burgundy.usdz', poster:'poster-bike1-burgundy.png'}, // <- this is 0
     { src: 'bike1-beige.glb', alt: 'GREVIL A303 BEIGE' , ios:'bike1-beige.usdz', poster:'poster-bike1-beige.png'}, // <- this is 1
     { src: 'bike1-black.glb', alt: 'GREVIL A303 BLACK' , ios:'bike1-black.usdz', poster:'poster-bike1-black.png'}, // <- this is 2
     { src: 'bike2-red.glb', alt: 'DOGMA F12 GRENADIER RED' , ios:'bike2-red.usdz', poster:'poster-bike2-red.png'}, // <- this is 3
