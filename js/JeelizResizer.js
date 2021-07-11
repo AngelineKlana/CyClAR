@@ -1,15 +1,3 @@
-/*
-This helper can help for:
-* adjusting the canvas resolution to the good size -> this is crucial to
-optimize the code because if the canvas is too large,
-there are too much pixels to compute => it will be slow
-
-* to mirror horizontally or not the canvas -> if the front camera is used we
-need it flipped (mirror effect), while if the rear camera is used we need it not flipped
-
-* to get the best camera resolution (either above the canvas resolution or closer)
-to balance between performance and quality
-*/
 "use strict";
 
 const JeelizResizer = (function(){

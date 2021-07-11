@@ -1,19 +1,6 @@
 /**
  * Jeeliz Face Filter - https://github.com/jeeliz/jeelizFaceFilter
- *
  * Copyright 2018 Jeeliz ( https://jeeliz.com )
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
  */
 
 var JEEFACEFILTERAPI=(function(){window.JEEFACEFILTERAPIGEN=function(){function Cb(a){var b=null,d=null,e=null,n=0;this.o=function(f){this.ue(f.Pa);e.Bd({Hb:f.Hb,Eb:f.Eb})};this.Td=function(f){return b[f]};this.ue=function(f){var t=null;n=f.length;b=f.map(function(l,h){l=Object.assign({},l,{index:h,parent:this,Wa:t,ce:h===n-1});return t=h=0===h?Db.instance(l):Eb.instance(l)});d=b[0];e=b[n-1];b.forEach(function(l,h){0!==h&&l.qe()})};this.O=function(f,t){var l=t;b.forEach(function(h){l=h.O(l,f)});return l};this.Sd=function(){return d.B()};

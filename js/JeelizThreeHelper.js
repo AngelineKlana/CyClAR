@@ -1,7 +1,3 @@
-/*
-  Helper for Three.js
-*/
-
 const JeelizThreeHelper = (function(){
     // internal settings:
     const _settings = {
